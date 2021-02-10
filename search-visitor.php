@@ -94,7 +94,7 @@ $sdata=$_POST['searchdata'];
                                         </tr>
                                         </thead>
                                       <?php
-$ret=mysqli_query($con,"select *from tblvisitor where FullName like '$sdata%'||MobileNumber like '$sdata%'");
+$ret=mysqli_query($con,"select *from tblvisitor where FullName like '%$sdata%'||MobileNumber like '%$sdata%'||Email like '%$sdata%'||Deptartment like '%$sdata%'");
 $num=mysqli_num_rows($ret);
 if($num>0){
 $cnt=1;
@@ -106,7 +106,7 @@ while ($row=mysqli_fetch_array($ret)) {
                 <tr>
                   <td><?php echo $cnt;?></td>
             
-                  <td><?php  echo $row['FullName'];?></td>
+                  <td><?php  echo ucwords($row['FullName']);?></td>
                   <td><?php  echo $row['MobileNumber'];?></td>
                 <td><?php  echo $row['Email'];?></td>
                   <td><a href="visitor-detail.php?editid=<?php echo $row['ID'];?>"><i class="fa fa-edit fa-1x"></i></a></a></td>
@@ -115,7 +115,7 @@ while ($row=mysqli_fetch_array($ret)) {
                 $cnt=$cnt+1;
 } } else { ?>
   <tr>
-    <td colspan="8"> No record found against this search</td>
+    <td colspan="8 text-danger"> No record found against this search</td>
 
   </tr>
    

@@ -85,7 +85,7 @@ if (empty($_SESSION['cvmsaid'])) {
                                         </tr>
                                         </thead>
                                        <?php
-$ret=mysqli_query($con,"select *from tblvisitor");
+$ret=mysqli_query($con,"SELECT * FROM tblvisitor ORDER BY EnterDate DESC");
 $cnt=1;
 while ($row=mysqli_fetch_array($ret)) {
 

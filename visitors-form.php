@@ -20,7 +20,7 @@ $reasontomeet=$_POST['reasontomeet'];
  $query=mysqli_query($con,"insert into tblvisitor(FullName,Email,MobileNumber,Address,WhomtoMeet,Deptartment,ReasontoMeet) value('$fullname','$email','$mobnumber','$add','$whomtomeet','$department','$reasontomeet')");
 
     if ($query) {
-    $msg="Visitors Detail has been added.";
+    $msg="<span class='text-success'>Visitors Detail has been added.</span>";
   }
   else
     {
