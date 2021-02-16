@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.1
+-- version 5.0.4
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Feb 20, 2020 at 10:46 AM
--- Server version: 10.4.8-MariaDB
--- PHP Version: 7.3.11
+-- Host: localhost
+-- Generation Time: Feb 10, 2021 at 10:11 AM
+-- Server version: 10.4.17-MariaDB
+-- PHP Version: 8.0.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -19,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `cvmsdb`
+-- Database: `cvms`
 --
 
 -- --------------------------------------------------------
@@ -43,7 +42,7 @@ CREATE TABLE `tbladmin` (
 --
 
 INSERT INTO `tbladmin` (`ID`, `AdminName`, `UserName`, `MobileNumber`, `Email`, `Password`, `AdminRegdate`) VALUES
-(1, 'Admin user', 'admin', 7898799797, 'admin@gmail.com', 'village', '2019-04-22 06:26:14');
+(1, 'Admin user', 'admin', 7898799797, 'admin@gmail.com', '813f8ce580f276558ce9e5093468b1ab', '2019-04-22 06:26:14');
 
 -- --------------------------------------------------------
 
@@ -78,7 +77,10 @@ INSERT INTO `tblvisitor` (`ID`, `FullName`, `Email`, `MobileNumber`, `Address`, 
 (14, 'OLUOKUN KABIRU ADESINA', 'villageboy@gmail.com', 2348130584550, 'akaje compound', 'Babtech and Rahamat', 'Computer Science and Engineering in faculty of Engineering and Technoloy', 'To deliberate on how to solve world problem with programming ', '2020-02-03 20:02:38', NULL, NULL),
 (15, 'OLUOKUN KABIRU ADESINA', 'villageboy@gmail.com', 89998787878, 'kabir', 'Babtech and Rahamat', 'Computer Science and Engineering in faculty of Engineering and Technoloy', 'To deliberate on how to solve world problem with programming ', '2020-02-03 20:05:30', NULL, NULL),
 (16, 'OLUOKUN KABIRU ADESINA', 'villageboy@gmail.com', 2348130584550, 'No 5 Akala family house street Taara Ogbomoso Oyo State Nigeria', 'Babtech and Rahamat', 'Computer Science and Engineering in faculty of Engineering and Technoloy', 'To deliberate on how to solve world problem with programming ', '2020-02-03 20:08:48', NULL, NULL),
-(17, 'OLLOGBENLA SEYI', 'ologbenla@gmail.com', 89489478934, 'ile akaje compound Taara ogbomoso', 'village boy', 'science', 'to buy some thin', '2020-02-03 20:23:37', NULL, NULL);
+(17, 'OLLOGBENLA SEYI', 'ologbenla@gmail.com', 89489478934, 'ile akaje compound Taara ogbomoso', 'village boy', 'science', 'to buy some thin', '2020-02-03 20:23:37', NULL, NULL),
+(18, 'oluokun kabiru', 'oka@vb.com', 473289, 'Isalu Iseyin', 'Village boy', 'CSE', 'For software developmentt', '2021-02-10 08:48:58', NULL, NULL),
+(19, 'mary', 'mary@vb.com', 75837, '32 orita sabo', 'Village boy', 'Goelogy', 'to discuse new software idea', '2021-02-10 08:53:31', NULL, NULL),
+(20, 'Adebisi Abosede', 'adebisi@vb.com', 348048, 'Ayekale Osogbo', 'Village boy at OICHUB', 'Software maintainance ', 'Managing new software from village boy', '2021-02-10 09:05:54', NULL, NULL);
 
 --
 -- Indexes for dumped tables
@@ -110,7 +112,7 @@ ALTER TABLE `tbladmin`
 -- AUTO_INCREMENT for table `tblvisitor`
 --
 ALTER TABLE `tblvisitor`
-  MODIFY `ID` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `ID` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

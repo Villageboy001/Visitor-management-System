@@ -1,7 +1,7 @@
 <aside class="menu-sidebar d-none d-lg-block">
             <div class="logo">
         
-                   <h5>OLUOKUN KABIRU Visitors Management System</h5>
+                   <h5>Visitors Management System</h5>
             </div>
             <div class="menu-sidebar__content js-scrollbar1">
                 <nav class="navbar-sidebar">
